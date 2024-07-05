@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'ss';
+  src: url('https://www.78912345.xyz/Fonts/SmileySans-Oblique.ttf.woff2');
+}
+.s a {
+  font-family: 'ss';
+  font-size: 20px;
+  color: black;
+  TEXT-DECORATION: none;
+}
+.s h3 {
+  font-family: 'ss';
+  color: black;
+}
+.b a {
+  font-family: 'ss';
+  color: pink;
+  TEXT-DECORATION: none;
+  font-size: 20px;
+}
+.b img {
+  width: 16px;
+  height: 16px;
+  color: black;
+}
