@@ -10,6 +10,10 @@ body {
   font-size: 20px;
   color: white;
   TEXT-DECORATION: none;
+  transition-duration: 0.4s;
+}
+.s a:hover {
+  color: gray;
 }
 .s h3 {
   font-family: 'ss';
