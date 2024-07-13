@@ -24,3 +24,16 @@ body {
   font-size: 20px;
   color: white;
 }
+.b a {
+  font-family: 'ss';
+  font-size: 20px;
+  color: white;
+  TEXT-DECORATION: none;
+  transition-duration: 0.3s;
+  position: absolute;
+  bottom: 10px; 
+  right: 10px;
+}
+.s a:hover {
+  color: gray;
+}
