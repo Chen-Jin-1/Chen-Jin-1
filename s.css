@@ -37,3 +37,18 @@ body {
 .b a:hover {
   color: gray;
 }
+.s h3 {
+  font-family: 'ss';
+  color: white;
+  position: absolute;
+  bottom: 10px; 
+  right: 10px;
+}
+.s p {
+  font-family: 'ss';
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  bottom: 10px; 
+  right: 10px;
+}
