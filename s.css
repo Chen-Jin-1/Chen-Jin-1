@@ -60,3 +60,13 @@ body {
   bottom: 10px; 
   right: 10px;
 }
+.s ol {
+  font-family: 'ss';
+  font-size: 20px;
+  color: white;
+}
+.s ul {
+  font-family: 'ss';
+  font-size: 20px;
+  color: white;
+}
