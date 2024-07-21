@@ -6,37 +6,23 @@ body {
   font-family: 'ss';
   src: url('https://www.78912345.xyz/Fonts/SmileySans-Oblique.ttf.woff2');
 }
-.s a {
+.s {
   font-family: 'ss';
-  font-size: 20px;
   color: white;
+}
+.s a {
+  font-size: 20px;
   TEXT-DECORATION: none;
   transition-duration: 0.3s;
 }
 .s a:hover {
   color: gray;
 }
-.s h3 {
-  font-family: 'ss';
-  color: white;
-}
-.s h2 {
-  font-family: 'ss';
-  color: white;
-}
-.s h1 {
-  font-family: 'ss';
-  color: white;
-}
 .s p {
-  font-family: 'ss';
   font-size: 20px;
-  color: white;
 }
 .b a {
-  font-family: 'ss';
   font-size: 20px;
-  color: white;
   TEXT-DECORATION: none;
   transition-duration: 0.3s;
   position: absolute;
@@ -47,37 +33,25 @@ body {
   color: gray;
 }
 .b h3 {
-  font-family: 'ss';
-  color: white;
   position: absolute;
   bottom: 10px; 
   right: 10px;
 }
 .b p {
-  font-family: 'ss';
   font-size: 20px;
-  color: white;
   position: absolute;
   bottom: 10px; 
   right: 10px;
 }
 .s ol {
-  font-family: 'ss';
   font-size: 20px;
-  color: white;
 }
 .s ul {
-  font-family: 'ss';
   font-size: 20px;
-  color: white;
 }
 .s li {
-  font-family: 'ss';
   font-size: 20px;
-  color: white;
 }
 .s menu {
-  font-family: 'ss';
   font-size: 20px;
-  color: white;
 }
