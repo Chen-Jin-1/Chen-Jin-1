@@ -10,7 +10,12 @@ body {
   font-family: 'ss';
   color: white;
 }
+.b {
+  font-family: 'ss';
+  color: white;
+}
 .s a {
+  color: white;
   font-size: 20px;
   TEXT-DECORATION: none;
   transition-duration: 0.3s;
