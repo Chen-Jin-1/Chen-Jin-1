@@ -1,47 +1,3 @@
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-
 ![](https://www.chen-jin.us.kg/Chen-Jin.png)
 # 我是 Chen-Jin 
 > [我的网站](https://www.chen-jin.us.kg/)
@@ -51,38 +7,8 @@
 [![](https://api.star-history.com/svg?repos=Chen-Jin-1/Chen-Jin-1&type=Date)](https://star-history.com/#Chen-Jin-1/Chen-Jin-1&Date)
 [![](https://api.star-history.com/svg?repos=Chen-Jin-1/CRXA&type=Date)](https://star-history.com/#Chen-Jin-1/CRXA&Date)
 ![](https://github-readme-activity-graph.vercel.app/graph?username=Chen-Jin-1&theme=tokyo-night)
-![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Chen-Jin;制作+CRXA)
-
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
-# 制作中
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Chen-Jin-1/Demo/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Chen-Jin-1/Demo/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Chen-Jin-1/Demo/output/github-contribution-grid-snake.svg">
+</picture>
