@@ -20,15 +20,42 @@
                 color: #555;
                 font-size: 15px;
             }
+
+            a {
+                font-size: 15px;
+                text-decoration: none;
+                color: #fff;
+                border: 1px solid #555;
+                padding: 5px 10px;
+                border-radius: 20px;
+                margin-top: 10px;
+                display: flex;
+                transition-duration: 0.3s;
+            }
+
+            a img {
+                height: 20px;
+                margin-right: 5px;
+            }
+            
+            a:hover {
+                background: #555;
+                box-shadow: 0 0 5px #aaa;
+            }
         </style>
         <script>
             fetch("https://v1.hitokoto.cn/?encode=text&c=i")
                 .then(_ => _.text())
                 .then(_ => document.getElementById("bio").innerText = _);
         </script>
+        <base target="_blank">
     </head>
     <body>
         Chen-Jin's Website
         <div id="bio"></div>
+        <a href="https://www.ccw.site/student/692aaebc86bbc77f84e3bdb0">
+            <img src="https://m.ccw.site/community/images/logo-ccw.png">
+            Chen-Jin Third @ CCW
+        </a>
     </body>
 </html>
