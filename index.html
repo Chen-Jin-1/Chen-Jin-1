@@ -12,10 +12,23 @@
                 overflow: hidden;
                 background: #000;
                 color: #fff;
+                font-size: 50px;
+                flex-direction: column;
+            }
+            
+            #bio {
+                color: #555;
+                font-size: 15px;
             }
         </style>
+        <script>
+            fetch("https://v1.hitokoto.cn/?encode=text&c=i")
+                .then(_ => _.text())
+                .then(_ => document.getElementById("bio").innerText = _);
+        </script>
     </head>
-  <body>
-    Chen-Jin's Website
-  </body>
+    <body>
+        Chen-Jin's Website
+        <div id="bio"></div>
+    </body>
 </html>
