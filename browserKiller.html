@@ -1,16 +1,14 @@
 <script>
-  setInterval(()=>{
-setInterval(()=>{
-const invertOverlay = document.createElement('div');
-invertOverlay.style.position = 'fixed';
-invertOverlay.style.top = '0';
-invertOverlay.style.left = '0';
-invertOverlay.style.right = '0';
-invertOverlay.style.bottom = '0';
-invertOverlay.style.backdropFilter = 'invert(1)';
-invertOverlay.style.pointerEvents = 'none';
-invertOverlay.style.zIndex = '999999';
-document.body.appendChild(invertOverlay);
-},1)
-},1)
+  setInterval(() => {
+    setInterval(() => {
+    const i = document.createElement('div');
+    i.style.position = 'fixed';
+    i.style.top = '0';
+    i.style.left = '0';
+    i.style.right = '0';
+    i.style.bottom = '0';
+    i.style.backdropFilter = 'invert(1)';
+    document.body.appendChild(i);
+    }, 1);
+  }, 1);
 </script>
