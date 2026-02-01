@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'pf';
+  src: url("https://m.ccw.site/community/fonts/PingFang.ttf");
+}
+
+body {
+  background: #000;
+  font-family: 'pf';
+  color: #fff;
+}

@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'ss';
+  src: url('https://res.chen-jin.dpdns.org/fonts/SmileySans/SmileySans-Oblique.ttf.woff2');
+}
+html {
+  background-color: #181a1b;
+  font-family: 'ss';
+  color: white;
+  cursor: url(https://res.09870123.xyz/mouse.svg) 4 4, auto
+}
+a {cursor: url(https://res.09870123.xyz/mouse.svg) 4 4, auto}
+.hr {
+  height: 2px;
+  border-width: 0px;
+  background-color: gray;
+}
+.s , .b{
+  color: white;
+  font-size: 20px;
+}
+.s a, .b a{
+  color: skyblue;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+.s a:hover, .b a:hover {
+  color: steelblue;
+}
+.b {
+  position: absolute;
+  text-align: right;
+  bottom: 0px; 
+  right: 5px;
+}
