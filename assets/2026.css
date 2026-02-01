@@ -8,3 +8,27 @@ body {
   font-family: 'pf';
   color: #fff;
 }
+
+.button {
+  font-size: 15px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  display: flex;
+  transition-duration: 0.3s;
+  align-items: center;
+  justify-content: center;
+}
+
+.button img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+.button:hover {
+  background: #555;
+  box-shadow: 0 0 5px #aaa;
+}

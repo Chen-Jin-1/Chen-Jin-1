@@ -1,48 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head>
-        <link rel="stylesheet" href="//css.chen-jin.dpdns.org/2026.css">
+        <link rel="stylesheet" href="/assets/2026.css">
         <title>Chen-Jin 的网站</title>
-        <style>
-            body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                overflow: hidden;
-                background: #000;
-                color: #fff;
-                font-size: 50px;
-                flex-direction: column;
-            }
-            
-            #bio {
-                color: #555;
-                font-size: 15px;
-            }
-
-            a {
-                font-size: 15px;
-                text-decoration: none;
-                color: #fff;
-                border: 1px solid #555;
-                padding: 5px 10px;
-                border-radius: 20px;
-                margin-top: 10px;
-                display: flex;
-                transition-duration: 0.3s;
-            }
-
-            a img {
-                height: 20px;
-                margin-right: 5px;
-            }
-            
-            a:hover {
-                background: #555;
-                box-shadow: 0 0 5px #aaa;
-            }
-        </style>
         <script>
             fetch("https://v1.hitokoto.cn/?encode=text&c=i")
                 .then(_ => _.text())
@@ -53,7 +13,11 @@
     <body>
         Chen-Jin's Website
         <div id="bio"></div>
-        <a href="https://www.ccw.site/student/692aaebc86bbc77f84e3bdb0">
+        <a href="https://www.ccw.site/student/692538ef86bbc77f84e3b259" class="button">
+            <img src="https://m.ccw.site/community/images/logo-ccw.png">
+            Chen-Jin NEXT @ CCW
+        </a>
+        <a href="https://www.ccw.site/student/692aaebc86bbc77f84e3bdb0" class="button">
             <img src="https://m.ccw.site/community/images/logo-ccw.png">
             Chen-Jin Third @ CCW
         </a>
