@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'PingFang';
+    src: url("https://m.ccw.site/community/fonts/PingFang.ttf");
+    font-display: swap;
+}
+
+:root {
+    --bg-start: #0f172a;
+    --bg-end: #020617;
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --accent-primary: #3b82f6;
+    --accent-secondary: #8b5cf6;
+    --border-color: #1e293b;
+    --glow-color: rgba(59, 130, 246, 0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 30%, var(--bg-start), var(--bg-end) 80%);
+    padding: 20px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: 40px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20%;
+    height: 60%;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--accent-primary), var(--accent-secondary));
+    border-radius: 0 2px 2px 0;
+    opacity: 0.8;
+    transition: height 0.3s ease;
+}
+
+.btn:hover::before {
+    height: 80%;
+    top: 10%;
+}
+
+.btn img {
+    height: 18px;
+    width: auto;
+    margin-right: 10px;
+    filter: brightness(1) drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.btn:hover {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: var(--accent-primary);
+    box-shadow: 0 12px 28px -8px var(--accent-primary);
+    transform: translateY(-3px);
+}
+
+.btn:hover img {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 8px 16px -4px var(--accent-primary);
+    transition: all 0.1s ease;
+}
+
+.btn.next {
+    border-left: 3px solid var(--accent-primary);
+}
+
+.btn.next::before {
+    background: linear-gradient(to bottom, var(--accent-primary), #60a5fa);
+}
+
+.btn.third {
+    border-left: 3px solid var(--accent-secondary);
+}
+
+.btn.third::before {
+    background: linear-gradient(to bottom, var(--accent-secondary), #c084fc);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 640px) {
+    .btn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    
+    .btn img {
+        height: 16px;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .btn img {
+        height: 14px;
+        margin-right: 6px;
+    }
+}
+
+@media print {
+    body { background: white; color: black; }
+    .btn { border: 1px solid #ccc; background: none; color: black; box-shadow: none; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}

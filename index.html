@@ -1,43 +1,114 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-    <head>
-        <link rel="stylesheet" href="/assets/2026.css">
-        <title>Chen-Jin 的网站</title>
-        <style>
+<head>
+    <link rel="stylesheet" href="assets/jx.css">
+    <title>Chen-Jin 的网站</title>
+    <base target="_blank">
+    <style>
+        body {
+            font-size: 42px;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-shadow: 0 2px 15px var(--glow-color);
+        }
+        
+        #bio {
+            color: var(--text-secondary);
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            margin: 16px 0 40px 0;
+            position: relative;
+            text-transform: uppercase;
+        }
+        
+        #bio::before,
+        #bio::after {
+            content: "◆";
+            color: var(--accent-primary);
+            margin: 0 12px;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+        
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .title {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        #bio {
+            animation: fadeIn 0.8s ease-out forwards;
+            animation-delay: 0.2s;
+            opacity: 0;
+        }
+        
+        .button-container {
+            animation: fadeIn 0.8s ease-out forwards;
+            animation-delay: 0.4s;
+            opacity: 0;
+        }
+        
+        @media (max-width: 640px) {
             body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                overflow: hidden;
-                background: #000;
-                color: #fff;
-                font-size: 30px;
-                flex-direction: column;
+                font-size: 36px;
+                letter-spacing: 3px;
             }
             
             #bio {
-                color: #555;
-                font-size: 15px;
+                font-size: 14px;
+                letter-spacing: 2px;
             }
-        </style>
-        <script>
-            fetch("https://v1.hitokoto.cn/?encode=text&c=i")
-                .then(_ => _.text())
-                .then(_ => document.getElementById("bio").innerText = _);
-        </script>
-        <base target="_blank">
-    </head>
-    <body>
-        Chen-Jin's Website
-        <div id="bio"></div>
-        <a href="https://www.ccw.site/student/692538ef86bbc77f84e3b259" class="button">
-            <img src="https://m.ccw.site/community/images/logo-ccw.png">
+            
+            #bio::before,
+            #bio::after {
+                margin: 0 8px;
+                font-size: 10px;
+            }
+            
+            .button-container {
+                max-width: 280px;
+                gap: 14px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                font-size: 28px;
+                letter-spacing: 2px;
+            }
+            
+            #bio {
+                font-size: 12px;
+                margin: 12px 0 32px 0;
+            }
+            
+            .button-container {
+                max-width: 240px;
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body class="flex-center">
+    <div class="title">Chen-Jin</div>
+    <div id="bio">高山仰止，景行行止</div>
+    <div class="button-container">
+        <a href="https://www.ccw.site/student/692538ef86bbc77f84e3b259" class="btn next">
+            <img src="https://m.ccw.site/community/images/logo-ccw.png" alt="">
             Chen-Jin NEXT @ CCW
         </a>
-        <a href="https://www.ccw.site/student/692aaebc86bbc77f84e3bdb0" class="button">
-            <img src="https://m.ccw.site/community/images/logo-ccw.png">
+        
+        <a href="https://www.ccw.site/student/692aaebc86bbc77f84e3bdb0" class="btn third">
+            <img src="https://m.ccw.site/community/images/logo-ccw.png" alt="">
             Chen-Jin Third @ CCW
         </a>
-    </body>
+    </div>
+</body>
 </html>
