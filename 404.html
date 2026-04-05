@@ -1,21 +1,257 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-  <head>
-    <meta http-equiv="refresh" content="3;url=https://www.09870123.xyz/">
-    <title>Chen-Jin 的网站 | 404 错误</title>
-    <link rel="stylesheet" type="text/css" href="https://css.09870123.xyz/s.css">
+<head>
+    <link rel="stylesheet" href="assets/jx.css">
+    <title>404 · 星辰迷途 | Chen-Jin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_blank">
     <style>
-      .s h3 {
-        vertical: middle;
-        text-align: center;
-      }
+        /* ===== 404 页面特定样式 ===== */
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at 30% 20%, var(--bg-start), var(--bg-end) 80%);
+            font-size: 42px;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-shadow: 0 2px 15px var(--glow-color);
+            padding: 20px;
+        }
+        
+        /* 404 主数字 */
+        .error-code {
+            font-size: 120px;
+            font-weight: 700;
+            letter-spacing: 8px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-primary) 40%, var(--accent-secondary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: none;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        /* 404 装饰线条 */
+        .error-code::before,
+        .error-code::after {
+            content: "✦";
+            position: absolute;
+            font-size: 30px;
+            background: none;
+            -webkit-background-clip: unset;
+            background-clip: unset;
+            color: var(--accent-primary);
+            opacity: 0.5;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .error-code::before {
+            left: -40px;
+        }
+        
+        .error-code::after {
+            right: -40px;
+        }
+        
+        /* 错误标题 */
+        .error-title {
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+        
+        /* 错误描述 */
+        .error-message {
+            font-size: 16px;
+            color: var(--text-secondary);
+            letter-spacing: 2px;
+            max-width: 400px;
+            text-align: center;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+        
+        /* 诗意分隔 */
+        .poetic-line {
+            font-size: 14px;
+            color: #5a6e8a;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+        
+        .poetic-line::before,
+        .poetic-line::after {
+            content: "——";
+            margin: 0 10px;
+            opacity: 0.5;
+        }
+        
+        /* 按钮容器 */
+        .button-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        /* 按钮尺寸调整 */
+        .btn {
+            padding: 10px 28px;
+            font-size: 15px;
+            min-width: 140px;
+        }
+        
+        /* 返回按钮特殊样式 */
+        .btn-home {
+            border-left: 3px solid var(--accent-primary);
+        }
+        
+        .btn-home::before {
+            background: linear-gradient(to bottom, var(--accent-primary), #60a5fa);
+        }
+        
+        /* 搜索按钮 */
+        .btn-search {
+            border-left: 3px solid #f59e0b;
+        }
+        
+        .btn-search::before {
+            background: linear-gradient(to bottom, #f59e0b, #fbbf24);
+        }
+        
+        /* 动画延迟 */
+        .error-code {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .error-title {
+            animation: fadeIn 0.8s ease-out forwards;
+            animation-delay: 0.15s;
+            opacity: 0;
+        }
+        
+        .error-message {
+            animation: fadeIn 0.8s ease-out forwards;
+            animation-delay: 0.3s;
+            opacity: 0;
+        }
+        
+        .poetic-line {
+            animation: fadeIn 0.8s ease-out forwards;
+            animation-delay: 0.45s;
+            opacity: 0;
+        }
+        
+        .button-group {
+            animation: fadeIn 0.8s ease-out forwards;
+            animation-delay: 0.6s;
+            opacity: 0;
+        }
+        
+        /* 星星闪烁动画 */
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        /* 响应式 */
+        @media (max-width: 640px) {
+            .error-code {
+                font-size: 80px;
+            }
+            
+            .error-code::before,
+            .error-code::after {
+                font-size: 20px;
+            }
+            
+            .error-code::before {
+                left: -25px;
+            }
+            
+            .error-code::after {
+                right: -25px;
+            }
+            
+            .error-title {
+                font-size: 18px;
+            }
+            
+            .error-message {
+                font-size: 14px;
+                max-width: 300px;
+            }
+            
+            .poetic-line {
+                font-size: 12px;
+            }
+            
+            .button-group {
+                gap: 15px;
+            }
+            
+            .btn {
+                padding: 8px 20px;
+                font-size: 14px;
+                min-width: 120px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 60px;
+            }
+            
+            .error-code::before,
+            .error-code::after {
+                display: none;
+            }
+            
+            .error-title {
+                font-size: 16px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+            
+            .btn {
+                width: 200px;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div class="s">
-      <h3>404 错误 | 找不到页面</h3>
-      <p>此页面将在 3 秒后回到主页</p>
-      <a href="https://www.chen-jin.us.kg/">回到主页</a>
+</head>
+<body class="flex-center">
+    <div class="error-code">404</div>
+    <div class="error-title">PAGE NOT FOUND</div>
+    <div class="error-message">
+        您所寻找的页面<br>
+        似乎迷失在了星辰之间
     </div>
-  </body>
+    <div class="poetic-line">行到水穷处，坐看云起时</div>
+    
+    <div class="button-group">
+        <a href="/" class="btn btn-home">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2h-5v-7H9v7H4a2 2 0 0 1-2-2z"/>
+            </svg>
+            返回首页
+        </a>
+        <a href="javascript:history.back()" class="btn btn-search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            返回上页
+        </a>
+    </div>
+</body>
 </html>

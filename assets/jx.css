@@ -129,6 +129,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 @media (max-width: 640px) {
