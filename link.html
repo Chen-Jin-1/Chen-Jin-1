@@ -1,0 +1,345 @@
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <title>Chen-Jin 的网站 | 友情链接</title>
+        <link rel="stylesheet" href="/assets/jx.css">
+        <style>
+            * {
+                user-select: none;
+                -webkit-tap-highlight-color: transparent;
+                -webkit-user-drag: none;
+            }
+
+            .friends-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 40px 20px 80px;
+            }
+
+
+            .back-header {
+                position: fixed;
+                top: 24px;
+                left: 24px;
+                z-index: 100;
+            }
+
+
+            .back-btn {
+                background: rgba(15, 23, 42, 0.75);
+                backdrop-filter: blur(12px);
+                border-radius: 40px;
+                padding: 10px 24px;
+                font-weight: 500;
+                transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            }
+
+            .back-btn:hover {
+                background: rgba(30, 41, 59, 0.9);
+                transform: translateX(-4px);
+            }
+
+            .page-title {
+                text-align: center;
+                margin-bottom: 48px;
+                margin-top: 20px;
+            }
+            .page-title h1 {
+                font-size: 2.8rem;
+                font-weight: 600;
+                background: linear-gradient(135deg, #fff, #94a3b8);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                letter-spacing: -0.5px;
+                text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            }
+            .page-title p {
+                color: var(--text-secondary);
+                font-size: 1.05rem;
+                margin-top: 12px;
+                opacity: 0.9;
+            }
+
+            .links-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                gap: 28px;
+                margin-top: 20px;
+            }
+
+            .friend-card {
+                background: rgba(15, 23, 42, 0.5);
+                backdrop-filter: blur(12px);
+                border: 1px solid var(--border-color);
+                border-radius: 28px;
+                padding: 24px 20px 20px;
+                transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+                box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4);
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                animation: fadeInUp 0.6s ease-out forwards;
+                opacity: 0;
+            }
+
+            .friend-card:nth-child(1) { animation-delay: 0.05s; }
+            .friend-card:nth-child(2) { animation-delay: 0.1s; }
+            .friend-card:nth-child(3) { animation-delay: 0.15s; }
+            .friend-card:nth-child(4) { animation-delay: 0.2s; }
+            .friend-card:nth-child(5) { animation-delay: 0.25s; }
+            .friend-card:nth-child(6) { animation-delay: 0.3s; }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .friend-card:hover {
+                transform: translateY(-8px);
+                border-color: var(--accent-primary);
+                box-shadow: 0 28px 40px -16px rgba(59, 130, 246, 0.3);
+                background: rgba(20, 30, 55, 0.6);
+            }
+
+            .card-avatar {
+                width: 80px;
+                height: 80px;
+                border-radius: 24px;
+                overflow: hidden;
+                margin-bottom: 20px;
+                background: linear-gradient(145deg, #1e293b, #0f172a);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid rgba(59,130,246,0.3);
+                transition: all 0.3s;
+                box-shadow: 0 10px 20px -5px rgba(0,0,0,0.5);
+            }
+            .friend-card:hover .card-avatar {
+                border-color: var(--accent-primary);
+                box-shadow: 0 0 0 2px rgba(59,130,246,0.4);
+            }
+
+            .card-avatar img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.4s ease;
+            }
+            .friend-card:hover .card-avatar img {
+                transform: scale(1.05);
+            }
+
+            .empty-avatar {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle at 30% 20%, #2d3a5e, #0f172a);
+                color: var(--text-secondary);
+                font-size: 32px;
+                font-weight: 300;
+            }
+
+
+            .friend-name {
+                font-size: 1.65rem;
+                font-weight: 600;
+                margin-bottom: 12px;
+                letter-spacing: -0.3px;
+                background: linear-gradient(to right, #ffffff, #cbd5e1);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                display: inline-block;
+            }
+
+
+            .friend-desc {
+                color: var(--text-secondary);
+                font-size: 0.95rem;
+                line-height: 1.5;
+                margin-bottom: 24px;
+                flex: 1;
+                word-break: break-word;
+            }
+
+
+            .card-footer {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: auto;
+                border-top: 1px dashed rgba(148, 163, 184, 0.2);
+                padding-top: 16px;
+            }
+
+            .friend-link {
+                font-size: 0.85rem;
+                color: var(--accent-primary);
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                transition: all 0.2s;
+                background: rgba(59,130,246,0.1);
+                padding: 6px 12px;
+                border-radius: 40px;
+            }
+            .friend-link:hover {
+                background: rgba(59,130,246,0.3);
+                gap: 10px;
+                color: white;
+            }
+
+            .placeholder-link {
+                color: #5b6e8c;
+                font-size: 0.8rem;
+                background: none;
+                padding: 0;
+            }
+
+            @media (max-width: 768px) {
+                .back-header {
+                    top: 16px;
+                    left: 16px;
+                }
+                .back-btn {
+                    padding: 8px 20px;
+                    font-size: 14px;
+                }
+                .page-title h1 {
+                    font-size: 2rem;
+                }
+                .links-grid {
+                    gap: 20px;
+                    grid-template-columns: 1fr;
+                }
+                .friend-card {
+                    padding: 20px 16px;
+                }
+                .friend-name {
+                    font-size: 1.4rem;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .friends-container {
+                    padding: 30px 16px;
+                }
+                .card-avatar {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 20px;
+                }
+            }
+
+            .bg-glow {
+                position: fixed;
+                width: 80vw;
+                height: 80vw;
+                background: radial-gradient(circle, rgba(59,130,246,0.12) 0%, rgba(139,92,246,0) 70%);
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 0;
+                bottom: -20vh;
+                right: -20vw;
+            }
+            .bg-glow-left {
+                left: -20vw;
+                top: -20vh;
+                background: radial-gradient(circle, rgba(139,92,246,0.1) 0%, rgba(0,0,0,0) 70%);
+            }
+
+            .friends-container {
+                position: relative;
+                z-index: 2;
+            }
+
+            .friend-card:has(.friend-name:empty) {
+                pointer-events: none;
+            }
+        </style>
+    </head>
+<body>
+    <div class="back-header">
+        <a href="/" class="btn back-btn">
+            <span style="font-size: 1.2rem; margin-right: 6px;">←</span> 返回首页
+        </a>
+    </div>
+
+    
+    <div class="bg-glow"></div>
+    <div class="bg-glow bg-glow-left"></div>
+
+    <main class="friends-container">
+        <div class="page-title fade-in">
+            <h1>友情链接</h1>
+            <p>志同道合 · 互相照耀</p>
+        </div>
+
+        <div class="links-grid">      
+            <a href="https://www.ccwmoran.top/" target="_blank" rel="noopener noreferrer" class="friend-card" style="text-decoration: none; display: block; cursor: pointer;">
+                <div class="card-avatar">
+                    <img src="https://gpo.saobby.com/i/BA9EN3Rw3fzRUJmu.jpg" alt="CCWMORAN 慕然科技 Logo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'empty-avatar\'><span>🌐</span></div>';">
+                </div>
+                <div class="friend-name">CCWMORAN 慕然科技</div>
+                <div class="friend-desc">愿你在峥嵘长青的世界里热忱不息</div>
+            </a>
+
+            
+            <div class="friend-card">
+                <div class="card-avatar">
+                    <div class="empty-avatar" style="background: rgba(30,41,59,0.4); font-size:0;"></div>
+                </div>
+                <div class="friend-name" style="min-height: 2rem;"></div>
+                <div class="friend-desc" style="min-height: 3rem;"></div>
+            </div>
+
+            <div class="friend-card">
+                <div class="card-avatar">
+                    <div class="empty-avatar" style="background: rgba(30,41,59,0.4); font-size:0;"></div>
+                </div>
+                <div class="friend-name" style="min-height: 2rem;"></div>
+                <div class="friend-desc" style="min-height: 3rem;"></div>
+            </div>
+
+            <!-- 卡片4: 空 -->
+            <div class="friend-card">
+                <div class="card-avatar">
+                    <div class="empty-avatar" style="background: rgba(30,41,59,0.4); font-size:0;"></div>
+                </div>
+                <div class="friend-name" style="min-height: 2rem;"></div>
+                <div class="friend-desc" style="min-height: 3rem;"></div>
+            </div>
+
+            <!-- 卡片5: 空 -->
+            <div class="friend-card">
+                <div class="card-avatar">
+                    <div class="empty-avatar" style="background: rgba(30,41,59,0.4); font-size:0;"></div>
+                </div>
+                <div class="friend-name" style="min-height: 2rem;"></div>
+                <div class="friend-desc" style="min-height: 3rem;"></div>
+            </div>
+
+            <!-- 卡片6: 空 -->
+            <div class="friend-card">
+                <div class="card-avatar">
+                    <div class="empty-avatar" style="background: rgba(30,41,59,0.4); font-size:0;"></div>
+                </div>
+                <div class="friend-name" style="min-height: 2rem;"></div>
+                <div class="friend-desc" style="min-height: 3rem;"></div>
+            </div>
+        </div>
+    </body>
+</html>
