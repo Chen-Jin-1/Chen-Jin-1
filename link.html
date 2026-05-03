@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="zh-CN">
     <head>
         <meta charset="UTF-8">
@@ -83,6 +84,7 @@
                 flex-direction: column;
                 animation: fadeInUp 0.6s ease-out forwards;
                 opacity: 0;
+                pointer-events: none;
             }
 
             .friend-card:nth-child(1) { animation-delay: 0.05s; }
@@ -266,14 +268,18 @@
                 z-index: 2;
             }
 
-            .friend-card:has(.friend-name:empty) {
-                pointer-events: none;
+            .c1 {
+                pointer-events: auto;
+                text-decoration: none;
+                display: block;
+                cursor: pointer;
             }
         </style>
+        <base target="_target">
     </head>
 <body>
     <div class="back-header">
-        <a href="/" class="btn back-btn">
+        <a href="/" class="btn back-btn" target="_self">
             <span style="font-size: 1.2rem; margin-right: 6px;">←</span> 返回首页
         </a>
     </div>
@@ -288,57 +294,53 @@
             <p>志同道合 · 互相照耀</p>
         </div>
 
-        <div class="links-grid">      
-            <a href="https://www.ccwmoran.top/" target="_blank" rel="noopener noreferrer" class="friend-card" style="text-decoration: none; display: block; cursor: pointer;">
+        <div class="links-grid">
+            <a class="friend-card c1" href="https://431658.dpdns.org/">
                 <div class="card-avatar">
-                    <img src="https://gpo.saobby.com/i/BA9EN3Rw3fzRUJmu.jpg" alt="CCWMORAN 慕然科技 Logo" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'empty-avatar\'><span>🌐</span></div>';">
+                    <img src="https://m.ccw.site/post/692538ef86bbc77f84e3b259/e10b721a-ab12-497a-96b9-eea670bfde4b.png">
+                </div>
+                <div class="friend-name">不想上学的网站</div>
+                <div class="friend-desc"></div>
+            </a>
+                 
+            <a class="friend-card c1" href="https://www.ccwmoran.top/">
+                <div class="card-avatar">
+                    <img src="https://gpo.saobby.com/i/BA9EN3Rw3fzRUJmu.jpg">
                 </div>
                 <div class="friend-name">CCWMORAN 慕然科技</div>
                 <div class="friend-desc">愿你在峥嵘长青的世界里热忱不息</div>
             </a>
 
-            
             <div class="friend-card">
                 <div class="card-avatar">
                     <div class="empty-avatar" style="background: rgba(30,41,59,0.4); font-size:0;"></div>
                 </div>
-                <div class="friend-name" style="min-height: 2rem;"></div>
-                <div class="friend-desc" style="min-height: 3rem;"></div>
+                <div class="friend-name"></div>
+                <div class="friend-desc"></div>
             </div>
 
             <div class="friend-card">
                 <div class="card-avatar">
                     <div class="empty-avatar" style="background: rgba(30,41,59,0.4); font-size:0;"></div>
                 </div>
-                <div class="friend-name" style="min-height: 2rem;"></div>
-                <div class="friend-desc" style="min-height: 3rem;"></div>
+                <div class="friend-name"></div>
+                <div class="friend-desc"></div>
             </div>
 
-            <!-- 卡片4: 空 -->
             <div class="friend-card">
                 <div class="card-avatar">
                     <div class="empty-avatar" style="background: rgba(30,41,59,0.4); font-size:0;"></div>
                 </div>
-                <div class="friend-name" style="min-height: 2rem;"></div>
-                <div class="friend-desc" style="min-height: 3rem;"></div>
+                <div class="friend-name"></div>
+                <div class="friend-desc"></div>
             </div>
 
-            <!-- 卡片5: 空 -->
             <div class="friend-card">
                 <div class="card-avatar">
                     <div class="empty-avatar" style="background: rgba(30,41,59,0.4); font-size:0;"></div>
                 </div>
-                <div class="friend-name" style="min-height: 2rem;"></div>
-                <div class="friend-desc" style="min-height: 3rem;"></div>
-            </div>
-
-            <!-- 卡片6: 空 -->
-            <div class="friend-card">
-                <div class="card-avatar">
-                    <div class="empty-avatar" style="background: rgba(30,41,59,0.4); font-size:0;"></div>
-                </div>
-                <div class="friend-name" style="min-height: 2rem;"></div>
-                <div class="friend-desc" style="min-height: 3rem;"></div>
+                <div class="friend-name"></div>
+                <div class="friend-desc"></div>
             </div>
         </div>
     </body>
